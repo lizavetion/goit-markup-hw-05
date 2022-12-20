@@ -612,7 +612,10 @@ h2{
 .cards_link:hover, .cards_link:focus{
     display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-
+}
+.cards_link:hover, .about_projects_description{
+    transform: translateY(0%);
+    opacity: 1;
 }
 
 .product_cards{
@@ -648,12 +651,45 @@ h2{
     letter-spacing: 0.03em;
     position: absolute;
     margin: 0;
+    top: 0;
+    left: 0;
     padding: 40px 32px 162px 32px;
     width: 360px;
     height: 300px;
+    opacity: 0;
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* work-examples-wrapper {
+    position: relative;
+    overflow: hidden;
+} */
+
+/* .work-examples-desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    font-size: 18px;
+    line-height: 1.56;
+    color: #fff;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+/* .works-example-list-item-link:hover .work-examples-desc {
+    transform: translateY(0%);
+    opacity: 1;
+} */
 
 .product_cards:hover .about_projects_description,
 .product_cards:focus .about_projects_description {
